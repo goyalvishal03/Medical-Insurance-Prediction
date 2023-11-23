@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Premium Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        footer {
+            background-color: #4CAF50;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px #cccccc;
+        }
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+            border: none;
+            border-bottom: 2px solid #cccccc;
+            outline: none;
+        }
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 0;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Insurance Premium Prediction</h1>
+    </header>
+    <div class="container">
+        <form action="predict" method="post">
+            Age: <input type="text" name="age"><br>
+            Sex: <select name="Sex">
+                <option value="female">Female</option>
+                <option value="male">Male</option>
+            </select><br>
+            bmi: <input type="text" name="bmi"><br>
+            Children: <input type="text" name="children"><br>
+            Smoker: <select name="smoker">
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
+            </select><br>
+            Region: <select name="region">
+                <option value="northeast">Northeast</option>
+                <option value="northwest">Northwest</option>
+                <option value="southeast">Southeast</option>
+                <option value="southwest">Southwest</option>
+            </select><br>
+            <button id="sub" type="submit">Predict</button>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2023 Insurance Premium Prediction</p>
+    </footer>
+</body>
+</html>
